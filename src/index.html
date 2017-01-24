@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ofo专题活动管理系统</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="static/css/index.css" type="text/css">
+  <link rel="stylesheet" href="static/wangEditor/dist/css/wangEditor.min.css" media="screen" title="no title" charset="utf-8">
+
+  <script src="static/js/jquery-1.12.4.min.js"></script>
+  <script src="static/js/modernizr.min.js"></script>
+  <script src="static/wangEditor/dist/js/wangEditor.js"></script>
+  <script src="static/echarts.min.js"></script>
+</head>
+<body>
+<div id="app" class="page-wrapper">
+  <div class="page-site-loading" id="page-site-loading">
+    <img src='images/logo.png'/>
+    <div id="loading-text">ofo专题活动管理系统</div>
+  </div>
+</div>
+
+<script>__REACT_DEVTOOLS_GLOBAL_HOOK__ = parent.__REACT_DEVTOOLS_GLOBAL_HOOK__</script>
+<script>
+  (function () {
+    var content = document.getElementById('loading-text');
+    content.innerHTML = content.innerHTML.split('').map(function (letter, i) {
+      var className;
+      if (i > 0 && i < content.innerText.length - 1) {
+        className = 'yoyo-x-' + (i % 6);
+      }
+      if (letter.trim() === '') {
+        className += ' blank';
+      }
+      return '<span class="' + className + '">' + letter + '</span>';
+    }).join('');
+  })();
+</script>
+<script type="text/javascript" src="./assets/app.js"></script>
+</body>
+</html>
